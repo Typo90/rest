@@ -7,6 +7,7 @@ Provide user specific data and interact with gate.io
 '''
 
 from gateAPI import GateIO
+import json
 
 # 填写 apiKey APISECRET
 apiKey = 'your api key'
@@ -28,16 +29,23 @@ gate_trade = GateIO(API_TRADE_URL, apiKey, secretKey)
 
 
 # Trading Pairs
-print(gate_query.pairs())
+# print(gate_query.pairs())
 
 
 # Below, use general methods that query the exchange
 
 #  Market Info
+
 # print(gate_query.marketinfo())
 
 # Market Details
-# print(gate_query.marketlist())
+
+#print(gate_query.marketlist())
+str1=gate_query.marketlist()
+
+#data = json.loads(str1)
+#print(data[name_cn])
+print(str1["name_cn"])
 
 # Tickers
 # print(gate_query.tickers())

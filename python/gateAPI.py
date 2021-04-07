@@ -133,3 +133,5 @@ class GateIO:
         URL = "/api2/1/private/withdraw"
         params = {'currency': currency, 'amount': amount,'address':address}
         return httpPost(self.__url, URL, params, self.__apiKey, self.__secretKey)
+
+
